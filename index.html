@@ -1,24 +1,56 @@
 <!DOCTYPE html>
-<html lang="hu">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Személyes Könyvtár Kezelő Portál</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Személyes Könyvtár</title>
+    <style>
+        body {
+            background-color: #f8f9fa; 
+            font-family: Arial, sans-serif;
+            padding-top: 20px; 
+            padding-bottom: 20px;
+        }
 
+        .navbar-brand {
+            font-size: 24px; 
+            font-weight: bold; 
+        }
+
+        .container {
+            background-color: #fff; 
+            border-radius: 10px; 
+            padding: 20px; 
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); 
+            border-color: black;
+        }
+
+        .card {
+            border: none; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); 
+        }
+
+        .btn {
+            border-radius: 5px; 
+            font-weight: bold; 
+        }
+
+    </style>
+</head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid"> <a class="navbar-brand" href="#">Személyes Könyvtár Kezelő Portál</a> <button class="navbar-toggler"
+        <div class="container-fluid"> <a class="navbar-brand "onclick="window.location.href='index.html'">Személyes Könyvtár Kezelő Portál</a> <button class="navbar-toggler"
                 type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
                     class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                         <li class="nav-item"> <a class="nav-link" href="#h2" onclick="window.location.href='hozzaadas.html'">Könyv hozzáadása</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#h2">Hozzászólások</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#h2">Kívánságlista</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#h2" onclick="window.location.href='osszeskonyv.html'" >Kívánságlista</a> </li>
                 </ul>
                 <form class="d-flex"> <input class="form-control mr-2" type="search" placeholder="Keresés..."
                         aria-label="Search"> <button class="btn btn-outline-danger" type="submit">Keresés</button>
@@ -29,12 +61,12 @@
     <div class="row justify-content-center mt-5">
         <div class="col-lg-6 col-md-8 col-sm-10">
             <div class="container">
-                <h1 class="mt-5 mb-4">Személyes Könyvtár Kezelő Portál</h1>
+                <h1 class="mt-5 mb-4" text="justify-content-center">Személyes Könyvtár</h1>
                 <div class="row mt-4">
                     <div class="col-md-6 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h1>CÍM1</h1>
+                                <h3>CÍM1</h3>
                                 Szerző:<br>
                                 Kiadási év:<br>
                                 Leírás:<br>
@@ -46,7 +78,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h1>CÍM2</h1>
+                                <h3>CÍM2</h3>
                                 Szerző:<br>
                                 Kiadási év:<br>
                                 Leírás:<br>
@@ -60,7 +92,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h1>CÍM3</h1>
+                                <h3>CÍM3</h3>
                                 Szerző:<br>
                                 Kiadási év:<br>
                                 Leírás:<br>
@@ -72,7 +104,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h1>CÍM4</h1>
+                                <h3>CÍM4</h3>
                                 Szerző:<br>
                                 Kiadási év:<br>
                                 Leírás:<br>
@@ -86,7 +118,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h1>CÍM5</h1>
+                                <h3>CÍM5</h3>
                                 Szerző:<br>
                                 Kiadási év:<br>
                                 Leírás:<br>
@@ -98,7 +130,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h1>CÍM6</h1>
+                                <h3>CÍM6</h3>
                                 Szerző:<br>
                                 Kiadási év:<br>
                                 Leírás:<br>
@@ -110,22 +142,48 @@
                 </div>
             </div>
             <div class="mb-4">
-                <h2>Szóljon hozzá!</h2>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label"><b>Neve.:</b></label>
-                    <input type="email" class="form-control" id="name" placeholder="Pl.:Szikla Szilárd">
+                <div class="mb-4">
+                    <h2>Szóljon hozzá!</h2>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"><b>Neve:</b></label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Pl.: Szikla Szilárd">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"><b>Üzenete:</b></label>
+                        <textarea class="form-control" id="messageInput" rows="3"></textarea>
+                        <br>
+                        <button type="button" class="btn btn-dark" onclick="publikalas()">Közzététel</button>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label"><b>Üzenete.:</b></label>
-                    <textarea class="form-control" id="uzenet" rows="3"></textarea>
-                    <br>
-                    <button type="button" class="btn btn-dark">Közzététel</button>
-                </div>
+                <div id="commentSection"></div>
             </div>
-
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         </div>
     </div>
-</body>
 
+    <script>
+        function publikalas() {
+            var name = document.getElementById("nameInput").value;
+            var message = document.getElementById("messageInput").value;
+
+            if (name.trim() !== "" && message.trim() !== "") {
+                var commentDiv = document.createElement("div");
+                commentDiv.classList.add("mb-3");
+
+                var nameParagraph = document.createElement("p");
+                nameParagraph.innerHTML = "<b>" + name + ":</b>";
+                var messageParagraph = document.createElement("p");
+                messageParagraph.textContent = message;
+
+                commentDiv.appendChild(nameParagraph);
+                commentDiv.appendChild(messageParagraph);
+
+                document.getElementById("commentSection").appendChild(commentDiv);
+                document.getElementById("nameInput").value = "";
+                document.getElementById("messageInput").value = "";
+            } else {
+                alert("Sajnáljuk, hiba történt,próbálja újra!");
+            }
+        }
+    </script>
+</body>
 </html>
